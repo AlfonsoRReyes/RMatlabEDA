@@ -4,7 +4,7 @@
 \alias{m.eig}
 \title{EigenValues Function}
 \usage{
-m.eig(aMatrix = M)
+m.eig(M)
 }
 \arguments{
 \item{M}{a matrix}
@@ -14,10 +14,10 @@ This function replicate the Matlab eig() function.
 }
 \details{
 Returns:
-      the diagonal of eigen$values
-      the negative of eigen$vectors in descending order
+      the diagonal of eigen$values.
+      the negative of eigen$vectors in descending order.
 }
 \examples{
-m.eig()
+
 }
 \keyword{EDA}
