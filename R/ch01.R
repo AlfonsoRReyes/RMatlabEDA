@@ -13,11 +13,22 @@ mlab_eig <- function(M) {
   return(list(V = VV, D = D))
 }
 
-m.eig <- function(M) {
+#' EigenValues Function
+#'
+#' This function replicate the Matlab eig() function.
+#'
+#' Returns:
+#'       the diagonal of eigen$values
+#'       the negative of eigen$vectors in descending order
+#' @param M a matrix
+#' @keywords EDA
+#' @export
+#' @examples
+#' m.eig()
+
+m.eig <- function(aMatrix = M) {
   # replicate the Matlab eig() function
-  # Returns:
-  #       the diagonal of eigen$values
-  #       the negative of eigen$vectors in descending order
+
   eig <- eigen(M)
   # evalues <- matrix(eig$values, ncol = 1)
   evalues <- diag(rev(eig$values))
