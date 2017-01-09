@@ -1,0 +1,104 @@
+---
+title: "soft test"
+output:
+  html_document: default
+  html_notebook: default
+---
+
+```{r}
+library(RMatlabEDA)
+```
+
+
+## m.eig()
+Eigen values
+These should be the results:
+```
+$values
+          [,1]    [,2]
+[1,] 0.5899912 0.00000
+[2,] 0.0000000 1.28509
+
+$vectors
+           [,1]       [,2]
+[1,]  0.7327235 -0.6805265
+[2,] -0.6805265 -0.7327235
+```
+
+```{r}
+eig <- m.eig(cov(X.mvnrnd))
+eig
+```
+
+## projectionMatrixLine()
+
+```{r}
+X = matrix(c(4, 3, -4, 5), nrow=2, byrow = TRUE)
+theta <- pi /3
+c2 <- cos(theta)^2
+cs <- cos(theta)*sin(theta)
+s2 <- sin(theta)^2
+P <- array(c(c2, cs, cs, s2), dim = c(2,2))
+
+plot(X[, 1], X[, 2], 
+     xlim = c(-8, 8),
+     ylim = c(-8, 8),
+     pch = 20,
+     cex = 1.55
+     )
+abline(h=0, v=0)             # lines at (0, 0)
+projectionMatrixLine(P, col = 'green')   # draw the projection line at angle
+```
+
+## m.repmat()
+R doesn't have a direct equivalent of Matlab's `repmat` but it can be replicated with the `kronecker` function.
+
+We will work with the dataset yeast. We will transform the data to test `repmat`:
+```{r}
+n <- nrow(yeast.data)
+r <- m.repmat(matrix(colSums(yeast.data) / n , nrow = 1), n, 1)
+dim(r)
+```
+
+
+
+## m.flipud()
+
+```{r}
+
+D <- matrix(c(1273.559, 
+     1721.520,
+     1816.722,
+     2857.386,
+     3164.926,
+     4698.400,
+     5613.596,
+     7594.869,
+     8341.811,
+    12357.965,
+    16404.690,
+    17526.119,
+    23291.260,
+    44257.246,
+   129200.129,
+   215929.645,
+  1382376.350), 
+ 17, 1)          # 17x1
+
+m.flipud(D)
+```
+
+## m.svd()
+
+This is R's `svd` function:
+```{r}
+svd(lsiex.termdoc)
+
+```
+
+This is Matlab's equivalent:
+
+```{r}
+m.svd(lsiex.termdoc)
+```
+
