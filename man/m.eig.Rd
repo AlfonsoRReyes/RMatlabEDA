@@ -9,15 +9,26 @@ m.eig(M)
 \arguments{
 \item{M}{a matrix}
 }
+\value{
+the decompostion of M is returned as components of a list with components
+  \item{values}{values the diagonal of eigen$values.}
+  \item{vectors}{vectors the negative of eigen$vectors in descending order.}
+}
 \description{
 This function replicate the Matlab eig() function.
 }
-\details{
-Returns:
-      the diagonal of eigen$values.
-      the negative of eigen$vectors in descending order.
-}
 \examples{
+library(MASS)
+n <- 100
+mu <- c(-2, 2)
+sigma <- matrix(c(1, 0.5, 0.5, 1), nrow = 2)
+x <- mvrnorm(n, mu, sigma)
+eig <- m.eig(cov(x))
 
+# will load mvnrnd.RData file
+eigX <- m.eig(cov(X.mvnrnd))
+}
+\seealso{
+\code{\link{eigen}} for native \code{eigen} function.
 }
 \keyword{EDA}
