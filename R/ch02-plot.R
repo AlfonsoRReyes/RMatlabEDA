@@ -1,6 +1,7 @@
 #' Draw Projection Matrix 2D Line
 #'
 #' draw the projection line given the projection matrix of angle theta
+#'
 #' @param M projection matrix
 #' @param ... other parameters for \code{\link{abline}}
 #'
