@@ -1,4 +1,7 @@
 #' Generates matrix of zeros
+#'
+#' Similar to Matlab's zeros()
+#'
 #' @param m number of rows
 #' @param n number of columns
 #'
