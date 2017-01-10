@@ -4,6 +4,9 @@
 #' @param M projection matrix
 #' @param ... other parameters for \code{\link{abline}}
 #'
+#' @importFrom graphics abline
+#' @importFrom stats lm
+#'
 #' @export
 #'
 
