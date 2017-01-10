@@ -11,3 +11,4 @@ m.zeros <-function(m,n) {
   # replicate the Matlab zeros function
   matrix(0,nrow=m, ncol=n)
 }
+
