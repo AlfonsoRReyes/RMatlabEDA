@@ -4,6 +4,7 @@
 .Ruserdata
 
 # these lines below are coming from Github
+#
 # History files
 .Rhistory
 .Rapp.history
