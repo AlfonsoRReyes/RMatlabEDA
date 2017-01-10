@@ -32,3 +32,4 @@ eigX <- m.eig(cov(X.mvnrnd))
 \code{\link{eigen}} for native \code{eigen} function.
 }
 \keyword{EDA}
+

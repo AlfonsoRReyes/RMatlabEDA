@@ -4,7 +4,7 @@
 \name{lsiex.termdoc}
 \alias{lsiex.termdoc}
 \title{Document terms from lsiex data set}
-\format{A data frame of 384x17}
+\format{A data frame of 6x5}
 \description{
 Used in Example 2-3 for Singular Value Decomposition
 }
@@ -12,3 +12,4 @@ Used in Example 2-3 for Singular Value Decomposition
 lsiex.termdoc[1]
 }
 \keyword{datasets}
+

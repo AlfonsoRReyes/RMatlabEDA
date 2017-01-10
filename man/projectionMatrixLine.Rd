@@ -14,3 +14,4 @@ projectionMatrixLine(M, ...)
 \description{
 draw the projection line given the projection matrix of angle theta
 }
+

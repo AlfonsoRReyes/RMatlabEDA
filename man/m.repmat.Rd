@@ -16,3 +16,4 @@ m.repmat(M, n, m)
 \description{
 Replicates the repmat function in Matlab/Octave
 }
+

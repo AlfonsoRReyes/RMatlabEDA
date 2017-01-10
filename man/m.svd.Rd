@@ -14,3 +14,4 @@ m.svd(M)
 Replicate Matlab function svd including the diag(d) which is not
     included in R svd()
 }
+

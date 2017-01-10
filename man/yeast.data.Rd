@@ -12,3 +12,4 @@ Random numbers coming from Matlab example.
 yeast.data[1]
 }
 \keyword{datasets}
+
